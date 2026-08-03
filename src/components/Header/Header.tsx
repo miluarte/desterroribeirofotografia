@@ -1,5 +1,5 @@
 import { User, X } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 import NavLink from "../NavLink/NavLink";
 import "./Header.css";
@@ -12,11 +12,18 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="header">
+    <header className={`header${scrolled ? " header--scrolled" : ""}`}>
       <div className="header__inner">
         <a href="/" className="header__logo" aria-label="Desterro Ribeiro Fotografia">
           <img src="/logo/logo-reduzida.svg" alt="DRF" width={140} height={28} />
