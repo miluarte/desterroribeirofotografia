@@ -1,0 +1,63 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  height: 40px;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* ---- Filled ---- */
+.btn--filled {
+  background-color: var(--action-primary-bg-emphasis-default);
+  color: var(--action-primary-fg-on-emphasis);
+  border-color: transparent;
+}
+
+.btn--filled:hover:not(:disabled) {
+  background-color: var(--action-primary-bg-emphasis-hover);
+}
+
+/* ---- Outline ---- */
+.btn--outline {
+  background-color: var(--action-secondary-bg-emphasis-default);
+  color: var(--fg-default);
+  border-color: var(--action-secondary-border);
+}
+
+.btn--outline:hover:not(:disabled) {
+  background-color: var(--action-secondary-bg-emphasis-hover);
+}
+
+/* ---- Outline White ---- */
+.btn--outline-white {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn--outline-white:hover:not(:disabled) {
+  background-color: var(--color-white-alpha-12);
+}
+
+/* ---- Disabled ---- */
+.btn--disabled,
+.btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---- Icon ---- */
+.btn svg {
+  flex-shrink: 0;
+}

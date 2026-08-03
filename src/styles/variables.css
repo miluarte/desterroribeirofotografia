@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Design Tokens - DRF
+   ========================================================================== */
+
+:root {
+  /* ---- Global Colors ---- */
+  --color-black: #000000;
+  --color-blue-50: #EEF1F5;
+  --color-blue-100: #D6DEE9;
+  --color-blue-200: #B1C2D6;
+  --color-blue-300: #8FA9C5;
+  --color-blue-400: #7B92AA;
+  --color-blue-500: #687C91;
+  --color-blue-600: #566779;
+  --color-blue-700: #455463;
+  --color-blue-800: #303A45;
+  --color-blue-900: #191F26;
+  --color-blue-950: #0D1116;
+  --color-white: #FFFFFF;
+  --color-white-alpha-12: rgba(255, 255, 255, 0.12);
+  --color-white-alpha-20: rgba(255, 255, 255, 0.2);
+
+  /* ---- Spacing ---- */
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-28: 112px;
+  --spacing-32: 128px;
+  --spacing-36: 144px;
+  --spacing-40: 160px;
+  --spacing-44: 176px;
+  --spacing-48: 192px;
+  --spacing-52: 208px;
+  --spacing-56: 224px;
+  --spacing-60: 240px;
+  --spacing-64: 256px;
+  --spacing-72: 288px;
+  --spacing-80: 320px;
+  --spacing-96: 384px;
+  --spacing-px: 1px;
+  --spacing-0_5: 2px;
+  --spacing-1_5: 6px;
+  --spacing-2_5: 10px;
+  --spacing-3_5: 14px;
+
+  /* ---- Border Radius ---- */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-base: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---- Breakpoints ---- */
+  --breakpoint-xs-min: 340px;
+  --breakpoint-xs-max: 639px;
+  --breakpoint-sm-min: 640px;
+  --breakpoint-sm-max: 767px;
+  --breakpoint-md-min: 768px;
+  --breakpoint-md-max: 1023px;
+  --breakpoint-lg-min: 1024px;
+  --breakpoint-lg-max: 1279px;
+  --breakpoint-xl-min: 1280px;
+  --breakpoint-xl-max: 1535px;
+  --breakpoint-2xl-min: 1536px;
+  --breakpoint-2xl-max: 9999px;
+
+  /* ---- Typography ---- */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 48px;
+  --font-size-6xl: 60px;
+  --font-size-7xl: 72px;
+  --font-size-8xl: 96px;
+  --font-size-9xl: 128px;
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  --line-height-none: 16px;
+  --line-height-tight: 20px;
+  --line-height-snug: 22px;
+  --line-height-normal: 24px;
+  --line-height-relaxed: 26px;
+  --line-height-loose: 32px;
+  --line-height-xs: 16px;
+  --line-height-sm: 20px;
+  --line-height-md: 24px;
+  --line-height-lg: 28px;
+  --line-height-xl: 28px;
+  --line-height-2xl: 32px;
+  --line-height-3xl: 36px;
+  --line-height-4xl: 40px;
+  --line-height-5xl: 48px;
+  --line-height-6xl: 60px;
+  --line-height-7xl: 72px;
+  --line-height-8xl: 96px;
+  --line-height-9xl: 128px;
+  --letter-spacing-tighter: -0.8px;
+  --letter-spacing-tight: -0.4px;
+  --letter-spacing-normal: 0px;
+  --letter-spacing-wide: 0.4px;
+  --letter-spacing-wider: 0.8px;
+  --letter-spacing-widest: 1.6px;
+  --font-family-sans: "DM Sans";
+  --font-family-mono: "Roboto Mono";
+  --font-family-serif: "Cormorant Garamond";
+
+  /* ---- WhatsApp ---- */
+  --color-whatsapp: #76b176;
+  --color-whatsapp-border: #a6bfa6;
+  --shadow-whatsapp: 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+
+  /* ---- Semantic ---- */
+  --bg-default: #FFF7ED;
+  --action-primary-fg-on-emphasis: var(--color-white);
+  --action-primary-bg-emphasis-default: var(--color-blue-600);
+  --action-primary-bg-emphasis-hover: var(--color-blue-700);
+  --action-secondary-fg: var(--fg-default);
+  --action-secondary-border: var(--color-blue-600);
+  --action-secondary-bg-emphasis-default: rgba(86, 103, 121, 0.08);
+  --action-secondary-bg-emphasis-hover: rgba(86, 103, 121, 0.12);
+  --fg-emphasis: var(--color-blue-900);
+  --fg-default: var(--color-blue-600);
+  --fg-muted: var(--color-blue-400);
+  --fg-white: var(--color-white);
+}
