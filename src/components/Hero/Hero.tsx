@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
 import "./Hero.css";
+
+const AUTOPLAY_INTERVAL_MS = 6000;
 
 function ScrollArrow() {
   return (
@@ -17,8 +20,50 @@ function ScrollArrow() {
 }
 
 export default function Hero() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
+    const timer = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % 3);
+    }, AUTOPLAY_INTERVAL_MS);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="hero">
+      <div className="hero__background" aria-label="Fotografias de sessões newborn, gestante e aniversário infantil">
+        <img
+          src="/imagens/heroSection/fotografia-newborn-bebe-ursinho-azul.webp"
+          alt="Recém-nascido sorrindo dormindo abraçado a um ursinho azul, sessão newborn"
+          width={1920}
+          height={1277}
+          fetchPriority="high"
+          decoding="async"
+          className={`hero__background-image ${activeIndex === 0 ? "is-active" : ""}`}
+        />
+        <img
+          src="/imagens/heroSection/fotografia-aniversario-um-aninho-tema-safari.webp"
+          alt="Bebê de um ano vestido de macacão bege sentado em cavalinho de madeira, decoração tema safari azul para festa de aniversário"
+          width={1920}
+          height={1277}
+          fetchPriority="low"
+          decoding="async"
+          className={`hero__background-image ${activeIndex === 1 ? "is-active" : ""}`}
+        />
+        <img
+          src="/imagens/heroSection/fotografia-gestante-detalhe-barriga-terco-vestido-amarelo.webp"
+          alt="Detalhe da barriga de gestante com terço entrelaçado nos dedos, vestido amarelo, ensaio de gestante"
+          width={1920}
+          height={1278}
+          fetchPriority="low"
+          decoding="async"
+          className={`hero__background-image ${activeIndex === 2 ? "is-active" : ""}`}
+        />
+      </div>
       <div className="hero__content">
         <div className="hero__brand-block">
           <img

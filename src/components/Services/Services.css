@@ -51,22 +51,29 @@
   height: 554px;
   border: 1px solid var(--color-blue-800);
   background-color: var(--color-blue-800);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+.service-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .service-card__overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to top,
-    rgba(13, 17, 22, 0.85) 0%,
-    rgba(13, 17, 22, 0.3) 50%,
+    rgba(13, 17, 22, 0.40) 0%,
+    rgba(13, 17, 22, 0.2) 50%,
     transparent 100%
   );
   pointer-events: none;
@@ -74,11 +81,11 @@
 
 .service-card__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2_5);
-  padding: var(--spacing-10) var(--spacing-5) var(--spacing-10);
+  padding: var(--spacing-5);
 }
 
 .service-card__monogram {
