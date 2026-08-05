@@ -8,7 +8,15 @@ export default function About() {
         {/* Left — image collage */}
         <div className="about__collage">
           <div className="about__img about__img--small" />
-          <div className="about__img about__img--large" />
+          <img
+            src="/imagens/fotografa/fotografa-desterro-ribeiro-retrato-camera.webp"
+            alt="Desterro Ribeiro segurando câmera fotográfica e sorrindo"
+            width={439}
+            height={549}
+            loading="lazy"
+            decoding="async"
+            className="about__img about__img--large"
+          />
           <span className="about__vertical-label" aria-hidden="true">Fotógrafa</span>
         </div>
 

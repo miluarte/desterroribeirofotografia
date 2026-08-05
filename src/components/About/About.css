@@ -26,14 +26,13 @@
 
 .about__img {
   position: absolute;
-  background-color: var(--color-blue-500);
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
   border: 1px solid var(--color-blue-800);
 }
 
 /* Small image — left, slightly below top */
 .about__img--small {
+  background-color: var(--color-blue-500);
   left: 0;
   top: 43px;
   width: calc(255 / 630 * 100%);  /* ~40.5% */
@@ -48,6 +47,7 @@
   width: calc(439 / 630 * 100%); /* ~69.7% */
   height: 100%;
   z-index: 2;
+  object-position: top;
 }
 
 /* Vertical "Fotógrafa" label — between images, rotated */
