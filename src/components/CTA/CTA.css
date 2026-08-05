@@ -1,6 +1,8 @@
 .cta {
   width: 100%;
-  background-color: var(--bg-default);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/imagens/cta/fotografia-newborn-bebe-dormindo-cesto-flores.webp');
+  background-size: cover;
+  background-position: center;
   padding: var(--spacing-20) var(--spacing-20);
   display: flex;
   justify-content: center;
@@ -30,7 +32,7 @@
   font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-5xl);
-  color: var(--fg-emphasis);
+  color: var(--color-white);
   text-transform: uppercase;
   text-align: center;
 }
@@ -40,7 +42,7 @@
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-relaxed);
-  color: var(--fg-default);
+  color: var(--color-white);
   text-align: center;
 }
 

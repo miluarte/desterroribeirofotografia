@@ -15,7 +15,7 @@ export default function CTA() {
 
         <Button
           label="Quero agendar meu ensaio"
-          variant="outline"
+          variant="outline white"
           icon={<User size={18} weight="regular" aria-hidden="true" />}
         />
       </div>
