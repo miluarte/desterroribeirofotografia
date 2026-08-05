@@ -47,7 +47,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  padding: calc(var(--spacing-16) + 130px) var(--spacing-5) var(--spacing-16);
+  padding: calc(var(--spacing-48) + 130px) var(--spacing-5) var(--spacing-16);
 }
 
 .hero__brand-block {
