@@ -66,7 +66,7 @@ export default function Footer() {
             <div className="footer__social">
               <SocialIcon
                 icon={<InstagramLogo size={28} weight="regular" />}
-                href="https://www.instagram.com/desterroribeiro/"
+                href="https://www.instagram.com/desterroribeiro"
                 label="Instagram"
               />
               <SocialIcon
