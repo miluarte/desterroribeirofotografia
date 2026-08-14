@@ -8,6 +8,7 @@ interface ButtonProps {
   icon?: ReactNode;
   showIcon?: boolean;
   disabled?: boolean;
+  href?: string;
   onClick?: () => void;
 }
 
@@ -17,6 +18,7 @@ export default function Button({
   icon,
   showIcon = true,
   disabled = false,
+  href,
   onClick,
 }: ButtonProps) {
   const className = [
@@ -28,6 +30,21 @@ export default function Button({
     .join(" ");
 
   const resolvedIcon = icon ?? <ArrowRight size={18} weight="regular" aria-hidden="true" />;
+
+  if (href && !disabled) {
+    return (
+      <a
+        className={className}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={onClick}
+      >
+        {showIcon && resolvedIcon}
+        <span className="btn__label">{label}</span>
+      </a>
+    );
+  }
 
   return (
     <button

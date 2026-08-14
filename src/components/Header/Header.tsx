@@ -6,7 +6,6 @@ import "./Header.css";
 
 const NAV_LINKS = [
   { label: "SERVIÇOS", href: "#servicos" },
-  { label: "PORTFOLIO", href: "#portfolio" },
   { label: "SOBRE", href: "#sobre" },
 ];
 
@@ -42,7 +41,7 @@ export default function Header() {
               variant="outline"
               icon={<User size={18} weight="regular" aria-hidden="true" />}
             />
-            <Button label="Agendar ensaio" variant="filled" />
+            <Button label="Agendar ensaio" variant="filled" href="https://wa.me/5586994799945" />
           </div>
         </div>
 
@@ -75,7 +74,12 @@ export default function Header() {
               icon={<User size={18} weight="regular" aria-hidden="true" />}
               onClick={closeMenu}
             />
-            <Button label="Agendar ensaio" variant="filled" onClick={closeMenu} />
+            <Button
+              label="Agendar ensaio"
+              variant="filled"
+              href="https://wa.me/5586994799945"
+              onClick={closeMenu}
+            />
           </div>
         </div>
       )}

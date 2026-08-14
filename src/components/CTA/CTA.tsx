@@ -17,6 +17,7 @@ export default function CTA() {
           label="Quero agendar meu ensaio"
           variant="outline white"
           icon={<User size={18} weight="regular" aria-hidden="true" />}
+          href="https://wa.me/5586994799945"
         />
       </div>
     </section>

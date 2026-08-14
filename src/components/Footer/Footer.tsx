@@ -66,12 +66,12 @@ export default function Footer() {
             <div className="footer__social">
               <SocialIcon
                 icon={<InstagramLogo size={28} weight="regular" />}
-                href="https://instagram.com/"
+                href="https://www.instagram.com/desterroribeiro/"
                 label="Instagram"
               />
               <SocialIcon
                 icon={<WhatsappLogo size={28} weight="regular" />}
-                href="https://wa.me/"
+                href="https://wa.me/5586994799945"
                 label="WhatsApp"
               />
             </div>
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__meta">
-          <span>© 2025 Desterro Ribeiro Fotografia · CNPJ 00.000.000/0001-00</span>
+          <span>© 2026 Desterro Ribeiro Fotografia · CNPJ 53.687.467/0001-18</span>
           <span>Fotógrafa newborn, gestante e família em Teresina</span>
         </div>
       </div>
